@@ -1,0 +1,405 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Aug 07 15:21:56 CST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>609 seconds (609295 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case8()'><b>case8</b><br>Test class: TestCases.PPM_Mobile_Series_B</td>
+<td><div><pre>java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.dafycredit.giveu.test.service.RunUnitService.runCase(RunUnitService.java:97)
+	at TestCases.PPM_Mobile_Series_B.case8(PPM_Mobile_Series_B.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.dafycredit.giveu.test.util.AppiumUtil.getElement(AppiumUtil.java:90)
+	at com.dafycredit.giveu.test.handler.ClickActionHandler.click(ClickActionHandler.java:30)
+	... 29 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1763260873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1763260873'><pre>java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.dafycredit.giveu.test.service.RunUnitService.runCase(RunUnitService.java:97)
+	at TestCases.PPM_Mobile_Series_B.case8(PPM_Mobile_Series_B.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.dafycredit.giveu.test.util.AppiumUtil.getElement(AppiumUtil.java:90)
+	at com.dafycredit.giveu.test.handler.ClickActionHandler.click(ClickActionHandler.java:30)
+	... 29 more
+</pre></div></td>
+<td>21</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case0()'><b>case0</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1335503880" onClick='toggleBox("Output-1335503880", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1335503880" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1335503880">
+修改当前用户所有合同为取消状态成功！<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case1()'><b>case1</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1866229258" onClick='toggleBox("Output-1866229258", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1866229258" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1866229258">
+验证在Android中,首次安装启动即有宝APP后,引导页显示正常且可以滑动至最后一页<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case2()'><b>case2</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1771421544" onClick='toggleBox("Output-1771421544", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1771421544" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1771421544">
+验证在引导页最后一页界面,点击开始体验按钮后,可以正常进入登录界面<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case3()'><b>case3</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1189084611" onClick='toggleBox("Output-1189084611", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1189084611" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1189084611">
+验证在引导页最后一页界面,点击开始体验按钮后,可以正常进入登录界面<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case4()'><b>case4</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1844334363" onClick='toggleBox("Output-1844334363", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1844334363" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1844334363">
+验证在产品信息界面,选择点击对应产品信息后,可以正常选择且自动弹出商品信息和身份证信息界面<br/>
+</div>
+</td>
+<td></td>
+<td>124</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case5()'><b>case5</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1722570594" onClick='toggleBox("Output-1722570594", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1722570594" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1722570594">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case6()'><b>case6</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1336777650" onClick='toggleBox("Output-1336777650", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1336777650" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1336777650">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case7()'><b>case7</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-948115224" onClick='toggleBox("Output-948115224", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-948115224" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-948115224">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case9()'><b>case9</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1361393151" onClick='toggleBox("Output-1361393151", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1361393151" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1361393151">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_10()'><b>case_10</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1901238627" onClick='toggleBox("Output-1901238627", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1901238627" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1901238627">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_11()'><b>case_11</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1638435724" onClick='toggleBox("Output-1638435724", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1638435724" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1638435724">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_12()'><b>case_12</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1524305331" onClick='toggleBox("Output-1524305331", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1524305331" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1524305331">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_13()'><b>case_13</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-264978436" onClick='toggleBox("Output-264978436", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-264978436" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-264978436">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_14()'><b>case_14</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-500618423" onClick='toggleBox("Output-500618423", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-500618423" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-500618423">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_15()'><b>case_15</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1458091526" onClick='toggleBox("Output-1458091526", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1458091526" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1458091526">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_16()'><b>case_16</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-768776793" onClick='toggleBox("Output-768776793", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-768776793" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-768776793">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_17()'><b>case_17</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-2036775591" onClick='toggleBox("Output-2036775591", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2036775591" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2036775591">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_18()'><b>case_18</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-307488715" onClick='toggleBox("Output-307488715", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-307488715" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-307488715">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>148</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_19()'><b>case_19</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-758572926" onClick='toggleBox("Output-758572926", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-758572926" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-758572926">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+<tr>
+<td title='TestCases.PPM_Mobile_Series_B.case_20()'><b>case_20</b><br>Test class: TestCases.PPM_Mobile_Series_B<br/>
+<a href="#Output-1640612861" onClick='toggleBox("Output-1640612861", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1640612861" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1640612861">
+填写基本信息<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.PPM_Mobile_Series_B@343f4d3d</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit name="JYQB_Enchashment" desc="即有钱包取现流程的测试场景点">
+    
+    <!--【操作注意事项】
+        0.执行Case前,为满足重复注册,需修改当前用户为未注册状态"
+    -->
+    
+    <case 
+        name="前置条件" 
+        desc="验证在数据库中,执行对应SQL语句,可以正常执行成功">
+        <step action="db-update" value="update cs_credit set STATUS='t' where CREDIT_TYPE='SQ'and id_person =16535561" desc="进行数据库操作,修改当前用户所有的取现合同为取消状态"/>
+    </case>
+  
+    <case 
+        name="case0" 
+        desc="单条用例测试的前置条件">
+        <step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_pwd" value="qpalzm520" desc="输入登录密码"/>
+	    <step action="android-click" locator="text=确认" desc="点击确认按钮"/>
+    </case>
+	
+	<case 
+	    name="case1" 
+	    desc="验证在个人中心界面,点击取现模块选项后,可以正常进入我要取现界面">
+        <step action="android-return" details="num:1" desc="模拟点击Android系统返回键1次,返回至个人中心界面"/>	
+        <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/ll_cash" desc="点击取现模块"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_loan" value="立即借款" message="进入我要取现界面失败(实际结果和预期结果不一致)" screenshot="Case1" desc="检查在个人中心界面,点击取现模块选项后,是否可以正常进入我要取现界面"/>
+	</case>
+	
+	<case 
+	    name="case2" 
+	    desc="验证在我要取现界面,点击立即借款按钮后,可以正常进入取现借款界面">
+	    <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/tv_loan" desc="点击立即借款按钮"/>
+	    <step action="android-check" locator="text=提款额" value="提款额" message="进入取现借款界面失败(实际结果和预期结果不一致)" screenshot="Case2" desc="检查在我要取现界面,点击立即借款按钮后,是否可以正常进入取现借款界面"/>      
+	</case>
+	
+	<case 
+	    name="case3" 
+	    desc="验证在取现借款界面,选择输入对应提款额和分期数,点击确定按钮后,可以正常进入输入交易密码界面">
+	    <step action="android-clear" locator="resource-id=com.giveu.shoppingmall:id/et_input_amount" desc="清空提款额"/>
+		<step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/et_input_amount" desc="点击提款额输入框"/>
+	    <step action="windows-cmd" value="adb shell ime set com.sohu.inputmethod.sogou.xiaomi/.SogouIME" desc="执行ADB命令,切换到搜狗输入法"/>
+	    <step action="wait-forced" value="3000" desc="强制等待3秒"/>
+	    <step action="android-keycode" details="key:8" desc="点击Android系统搜狗输入法键盘,1键"/>
+	    <step action="android-keycode" details="key:7" desc="点击Android系统搜狗输入法键盘,0键"/>
+	    <!--<step action="android-keycode" details="key:7" desc="点击Android系统搜狗输入法键盘,0键"/>
+	    <step action="android-keycode" details="key:7" desc="点击Android系统搜狗输入法键盘,0键"/>  -->00
+	    <step action="android-keycode" details="key:4" desc="点击Android系统搜狗输入法键盘,返回键"/>
+	    <step action="windows-cmd" value="adb shell ime set io.appium.android.ime/.UnicodeIME" desc="执行ADB命令,切换到UnicodeIME输入法"/>
+	    <step action="android-click" locator="text=9期" desc="选择分期数为9期"/>
+	    <step action="android-click" locator="text=确定" desc="点击确定按钮"/>
+	    <step action="android-check" locator="text=请输入交易密码，以验证身份" value="请输入交易密码，以验证身份" message="进入输入交易密码界面失败(实际结果和预期结果不一致)" screenshot="Case3" desc="检查在取现借款界面,选择输入对应提款额和分期数,点击确定按钮后,是否可以正常进入输入交易密码界面"/>      
+	</case>
+	
+	<case 
+	    name="case4" 
+	    desc="验证在输入交易密码界面,输入对应交易密码后,可以正常进入验证绑定手机界面">
+	    <step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/inputview_dialog" value="111111" desc="输入正确的交易密码"/>
+	    <step action="android-check" locator="text=已发送验证码到绑定手机" value="已发送验证码到绑定手机"  message="进入验证绑定手机界面失败(实际结果和预期结果不一致)" screenshot="case4" desc="检查在输入交易密码界面,输入对应交易密码后,是否可以正常进入验证绑定手机界面"/>    
+	</case>
+	
+	<case 
+	    name="case5" 
+	    desc="验证在验证绑定手机界面,输入对应验证码后,可以正常取现成功,并进入取现成功界面">
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/input_view_pwd" value="123456" desc="输入正确的验证码"/>
+        <step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_status" value="提现操作成功" message="进入取现成功失败(实际结果和预期结果不一致)" screenshot="case5" desc="检查在验证绑定手机界面,输入对应验证码后,是否可以正常取现成功,并进入取现成功界面"/>
+	</case>
+	
+	<case 
+	    name="case6" 
+	    desc="验证在取现成功界面,点击查看放款进度按钮后,可以正常进入取现记录界面">
+		<step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/tv_btn_top" desc="点击查看放款进度按钮"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/top_tab_center_title" value="取现记录" message="进入取现记录界面失败(实际结果和预期结果不一致)" screenshot="case6" desc="检查在取现成功界面,点击查看放款进度按钮后,是否可以正常进入取现记录界面"/>					
+	</case>			
+		
+	<case 
+	    name="case7" 
+	    desc="验证在取现记录界面,对应取现记录显示正确,包含(金额,状态，类型,时间)">	
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_loan" value="1000.0" message="取现金额显示错误(实际结果和预期结果不一致)" screenshot="case7" desc="检查在取现记录界面,取现成功后,对应取现金额是否显示正确"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_status" value="未放款" message="取现状态显示错误(实际结果和预期结果不一致)" screenshot="case7" desc="检查在取现记录界面,取现成功后,对应取现状态是否显示正确"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_source" value="常规取现分期" message="取现类型显示错误(实际结果和预期结果不一致)" screenshot="case7" desc="检查在取现记录界面,取现成功后,对应取现类型是否显示正确"/>
+		<!-- <step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_date" value="2017-10-16 18:20" message="取现时间显示错误(实际结果和预期结果不一致)" screenshot="case7" desc="检查在取现记录界面,取现成功后,对应取现时间是否显示正确"/> -->
+	</case>
+	
+	<case
+	    name="case8"
+	    desc="验证在取现记录界面,进入数据库根据合同ID执行存储过程后,可以自动改变取现状态为待放款">
+		<step action="db-query"  details="key:idcredit" value="select ID from cs_credit where id_person =16535561 order by APP_DATE DESC" desc="进行数据库操作,根据用户ID查询合同ID信息,并保存记录到本地"/>
+		<step action="db-procedure" details="prc_name:{call PRC_ACTIVE_CROSSCASH_lzzy(?,?)}" value="${idcredit[0].ID" desc="进行数据库操作,根据合同ID执行存储过程自动改变合同状态为现行"/>
+		<step action="android-return" details="num:1" desc="模拟点击Android系统返回键1次,返回至个人中心界面"/>	
+		<step action="android-click" locator="text=取现记录" desc="点击取现记录按钮"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_status" value="待放款" message="取现状态显示错误(实际结果和预期结果不一致)" screenshot="case8" desc="检查在取现记录界面,执行对应存储过程后,对应取现状态是否显示正确"/>
+	</case>
+</unit>

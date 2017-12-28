@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit name="JYQB_Repayment" desc="即有钱包还款流程的测试场景点">
+    
+    <!--【操作注意事项】
+        0.执行Case前,为满足支付成功,需登陆微信"
+    -->
+    
+    <case 
+        name="前置条件" 
+        desc="验证在数据库中,执行对应SQL语句,可以正常执行成功">
+ 
+    </case>
+  
+    <case 
+        name="case0" 
+        desc="单条用例测试的前置条件">
+        <step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_pwd" value="qpalzm520" desc="输入登录密码"/>
+	    <step action="android-click" locator="text=确认" desc="点击确认按钮"/>
+    </case>
+	
+	<case 
+	    name="case1" 
+	    desc="验证在我要取现界面,点击还款模块选项后,可以正常进入还款界面">
+        <step action="android-return" details="num:1" desc="模拟点击Android系统返回键1次,返回至我要取现界面"/>	
+        <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/ll_repayment" desc="点击还款模块"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_confirm" value="确定还款" message="进入还款界面失败(实际结果和预期结果不一致)" screenshot="Case1" desc="检查在我要取现界面,点击还款模块选项后,是否可以正常进入还款界面"/>
+	</case>
+	
+	<case 
+	    name="case2" 
+	    desc="验证在还款界面,选择对应分期产品,输入对应还款金额,点击确定还款按钮确定后,可以正常进入微信支付界面">
+	    <step action="android-click" locator="text=下期应还" desc="点击下期应还选项"/>
+	    <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/cb_choose" desc="勾选分期产品选项"/>
+	    <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/iv_change_money" desc="点击还款金额编辑按钮"/>
+	    <step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_money" value="0.05" desc="输入还款金额"/>
+	    <step action="android-click" locator="text=确定" desc="点击确定按钮"/>
+	    <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/tv_confirm" desc="点击确定还款按钮"/>
+	    <step action="android-click" locator="text=确定" desc="点击确定按钮"/>
+	    <step action="android-check" locator="text=立即支付" value="立即支付" message="进入微信支付界面失败(实际结果和预期结果不一致)" screenshot="Case2" desc="检查在还款界面,选择对应分期产品,输入对应还款金额,点击确定还款按钮确定后,是否可以正常进入微信支付界面"/>      
+	</case>
+	
+	<case 
+	    name="case3" 
+	    desc="验证在微信支付界面,点击立即支付按钮,输入对应支付密码后,可以正常支付成功,并进入支付成功界面">
+		<step action="android-click" locator="text=立即支付" desc="点击立即支付按钮"/>
+		<step action="android-click" locator="class=android.widget.RelativeLayout[2]" desc="点击支付密码输入框"/>
+		<step action="android-keycode" details="key:16" desc="点击Android系统搜狗输入法键盘,9键"/>
+		<step action="android-keycode" details="key:13" desc="点击Android系统搜狗输入法键盘,6键"/>
+		<step action="android-keycode" details="key:10" desc="点击Android系统搜狗输入法键盘,3键"/>
+		<step action="android-keycode" details="key:15" desc="点击Android系统搜狗输入法键盘,8键"/>
+		<step action="android-keycode" details="key:12" desc="点击Android系统搜狗输入法键盘,5键"/>
+		<step action="android-keycode" details="key:9" desc="点击Android系统搜狗输入法键盘,2键"/>
+	    <step action="android-check" locator="text=支付成功" value="支付成功" message="进入支付成功界面失败(实际结果和预期结果不一致)" screenshot="Case3" desc="检查在微信支付界面,点击立即支付按钮,输入对应支付密码后,是否可以正常支付成功,并进入支付成功界面"/>      
+	</case>
+	
+	<case 
+	    name="case4" 
+	    desc="验证在支付成功界面,点击返回即有分期按钮后,可以正常返回至还款界面">
+	    <step action="android-click" locator="text=返回即有分期" desc="点击返回即有分期按钮"/>
+	    <step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_confirm" value="确定还款" message="进入还款界面失败(实际结果和预期结果不一致)" screenshot="Case4" desc="检查在支付成功界面,点击返回即有分期按钮后,是否可以正常返回至还款界面"/>    
+	</case>
+</unit>

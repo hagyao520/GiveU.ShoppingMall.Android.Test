@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="WeChat_Shopping" parallel="false" configfailurepolicy ="continue">
+    <!---->
+    <test name="即有钱包微信购物激活流程的测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="WeChatShoppingTestCases.WeChatShopping_Activation"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    <!---->
+    <test name="即有钱包微信购物流程的测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="WeChatShoppingTestCases.WeChatShopping_Shopping"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    <!---->
+    <test name="即有钱包微信购物还款流程的测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="WeChatShoppingTestCases.WeChatShopping_Repayment"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    <!-- 调用的监听 -->    
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        <!--"org.testng.internal org.testng.TestRunner org.testng.SuiteRunner org.testng.remote.RemoteTestNG org.testng.TestNG sun.reflect java.lang"--> 
+        <!--"org.testng.reporters.EmailableReporter2,org.testng.reporters.jq.Main,org.testng.reporters.SuiteHTMLReporter,org.testng.reporters.XMLReporter,org.testng.reporters.JUnitReportReporter"--> 
+    </listeners>      
+</suite>

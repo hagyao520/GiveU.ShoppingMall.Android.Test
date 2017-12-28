@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - PPM模式下-用户购买B系列手机</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>PPM模式下-用户购买B系列手机</h1>
+<p>
+  Test duration: 80.083s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">TestCases.PPM_Mobile_Series_B</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  case2
+      </td>
+  <td class="duration">
+    4.099s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: 进入登录界面失败(实际结果和预期结果不一致)&nbsp; Actual 【 登录 】&nbsp; but found 【 登录1 】</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.dafycredit.giveu.test.base.StepAction$3.run(StepAction.java:56)<br />
+              com.dafycredit.giveu.test.base.TestUnit.runCase(TestUnit.java:56)<br />
+              TestCases.PPM_Mobile_Series_B.case2(PPM_Mobile_Series_B.java:29)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)<br />
+              org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)<br />
+              java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)<br />
+              java.util.concurrent.FutureTask.run(Unknown Source)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
+              java.lang.Thread.run(Unknown Source)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  case3
+      </td>
+  <td class="duration">
+    17.399s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.reflect.InvocationTargetException</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              com.dafycredit.giveu.test.base.TestUnit.runCase(TestUnit.java:54)<br />
+              TestCases.PPM_Mobile_Series_B.case3(PPM_Mobile_Series_B.java:35)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)<br />
+              org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)<br />
+              java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)<br />
+              java.util.concurrent.FutureTask.run(Unknown Source)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
+              java.lang.Thread.run(Unknown Source)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
+Command duration or timeout: 5.40 seconds<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;<br/>
+System info: host: &apos;PC102051&apos;, ip: &apos;10.10.75.30&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_25&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{app=D:\workspace\GiveU.3COrder.Android.Test\TestData\App\Test.apk, networkConnectionEnabled=true, noReset=false, noSign=true, warnings={}, databaseEnabled=false, deviceName=29d25815, fullReset=true, platform=LINUX, desired={app=D:\workspace\GiveU.3COrder.Android.Test\TestData\App\Test.apk, noReset=false, noSign=true, deviceName=Android Emulator, fullReset=true, newCommandTimeout=60000, platformVersion=5.5.1, sessionOverride=true, unicodeKeyboard=true, autoWebview=true, platformName=Android, device=selendroid, resetKeyboard=true}, newCommandTimeout=60000, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, sessionOverride=true, unicodeKeyboard=true, autoWebview=true, platformName=Android, device=selendroid, resetKeyboard=true}]<br/>
+Session ID: 032574d4-8545-4a30-93fa-fb8bf6cf3525<br/>
+*** Element info: {Using=id, value=android:id/button1}</a><br />
+        <div class="stackTrace" id="exception-2">
+                      sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+                      sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br />
+                      sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)<br />
+                      java.lang.reflect.Constructor.newInstance(Unknown Source)<br />
+                      org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
+                      org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)<br />
+                      io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:62)<br />
+                      io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.By$ById.findElement(By.java:218)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)<br />
+                      io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+                      com.dafycredit.giveu.test.handler.ClickActionHandler.click(ClickActionHandler.java:19)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+                      java.lang.reflect.Method.invoke(Unknown Source)<br />
+                      com.dafycredit.giveu.test.base.TestUnit.runCase(TestUnit.java:54)<br />
+                      TestCases.PPM_Mobile_Series_B.case3(PPM_Mobile_Series_B.java:35)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+                      java.lang.reflect.Method.invoke(Unknown Source)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+                      org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)<br />
+                      org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)<br />
+                      java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)<br />
+                      java.util.concurrent.FutureTask.run(Unknown Source)<br />
+                      java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
+                      java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
+                      java.lang.Thread.run(Unknown Source)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">TestCases.PPM_Mobile_Series_B</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  case1
+      </td>
+  <td class="duration">
+    2.615s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        验证在Android中,首次安装启动即有宝APP后,引导页显示正常且可以滑动至最后一页<br />
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>

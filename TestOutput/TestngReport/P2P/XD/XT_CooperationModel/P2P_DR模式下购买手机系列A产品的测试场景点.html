@@ -1,0 +1,453 @@
+<html>
+<head>
+<title>TestNG:  P2P_DR模式下购买手机系列A产品的测试场景点</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>P2P_DR模式下购买手机系列A产品的测试场景点</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>26/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Oct 09 18:16:36 CST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>695 seconds (695800 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case1()'><b>case1</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA</td>
+<td><div><pre>java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.dafycredit.giveu.test.service.RunUnit_Service.runCase(RunUnit_Service.java:103)
+	at TestCases.P2P_DR_Mobile_SeriesA.case1(P2P_DR_Mobile_SeriesA.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.AssertionError: 安装启动失败(实际结果和预期结果不一致)  Actual 【开始体验】  but found 【开始体验1】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.dafycredit.giveu.test.handler.CheckAction_Handler.checkEquals(CheckAction_Handler.java:103)
+	at com.dafycredit.giveu.test.handler.CheckAction_Handler.check(CheckAction_Handler.java:40)
+	... 18 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace170144208", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace170144208'><pre>java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.dafycredit.giveu.test.service.RunUnit_Service.runCase(RunUnit_Service.java:103)
+	at TestCases.P2P_DR_Mobile_SeriesA.case1(P2P_DR_Mobile_SeriesA.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.AssertionError: 安装启动失败(实际结果和预期结果不一致)  Actual 【开始体验】  but found 【开始体验1】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.dafycredit.giveu.test.handler.CheckAction_Handler.checkEquals(CheckAction_Handler.java:103)
+	at com.dafycredit.giveu.test.handler.CheckAction_Handler.check(CheckAction_Handler.java:40)
+	... 18 more
+</pre></div></td>
+<td>4</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.Precondition()'><b>Precondition</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-951826240" onClick='toggleBox("Output-951826240", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-951826240" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-951826240">
+验证在数据库中,执行对应SQL语句,可以正常执行成功<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case2()'><b>case2</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-2017981047" onClick='toggleBox("Output-2017981047", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2017981047" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2017981047">
+验证在引导页最后一页界面,点击开始体验按钮后,可以正常进入登录界面<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case3()'><b>case3</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1492661091" onClick='toggleBox("Output-1492661091", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1492661091" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1492661091">
+验证在登录界面,输入正确的账号和密码,已连接网络和开启GPS定位权限时,点击登录按钮后,可以正常登录并进入设置解锁密码界面<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case4()'><b>case4</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-961338490" onClick='toggleBox("Output-961338490", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-961338490" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-961338490">
+验证在新建订单界面,选择输入对应产品信息,点击下一步按钮后,可以正常进入产品列表界面<br/>
+</div>
+</td>
+<td></td>
+<td>38</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case5()'><b>case5</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1251338902" onClick='toggleBox("Output-1251338902", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1251338902" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1251338902">
+验证在产品列表界面,选择对应产品信息,点击下一步按钮后,可以正常进入商品信息界面<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case6()'><b>case6</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-2120621880" onClick='toggleBox("Output-2120621880", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2120621880" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2120621880">
+验证在商品信息界面,选择输入对应商品信息,点击下一步按钮后,可以正常进入客户信息界面<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case7()'><b>case7</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-829245241" onClick='toggleBox("Output-829245241", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-829245241" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-829245241">
+验证在客户信息界面,上传输入对应客户身份证正反面照片信息,点击生成订单按钮后,可以正常进入基本信息界面<br/>
+</div>
+</td>
+<td></td>
+<td>75</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case8()'><b>case8</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-308632755" onClick='toggleBox("Output-308632755", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-308632755" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-308632755">
+验证在基本信息界面,选择输入对应客户基本信息,点击下一步按钮后,可以正常进入单位信息界面<br/>
+</div>
+</td>
+<td></td>
+<td>128</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case9()'><b>case9</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1814039336" onClick='toggleBox("Output-1814039336", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1814039336" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1814039336">
+验证在单位信息界面,选择输入对应客户单位信息,点击下一步按钮后,可以正常进入联系人填写界面<br/>
+</div>
+</td>
+<td></td>
+<td>72</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_10()'><b>case_10</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-126367242" onClick='toggleBox("Output-126367242", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-126367242" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-126367242">
+验证在联系人填写界面,选择输入对应客户联系人信息,点击下一步按钮后,可以正常进入绑定银行卡界面<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_11()'><b>case_11</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-959691038" onClick='toggleBox("Output-959691038", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-959691038" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-959691038">
+验证在绑定银行卡界面,输入对应客户银行卡信息,点击下一步按钮后,可以正常进入其他信息界面<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_12()'><b>case_12</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-196209894" onClick='toggleBox("Output-196209894", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-196209894" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-196209894">
+验证在其他信息界面,输入对应客户其他信息,点击下一步按钮后,可以正常进入芝麻信用认证界面<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_13()'><b>case_13</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1603777363" onClick='toggleBox("Output-1603777363", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1603777363" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1603777363">
+验证在芝麻信用认证界面,点击跳过认证按钮后,可以正常跳过认证并进入运营商授权认证界面<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_14()'><b>case_14</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-102740621" onClick='toggleBox("Output-102740621", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-102740621" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-102740621">
+验证在运营商授权认证界面,点击跳过认证按钮后,可以正常跳过认证并进入影像证明界面<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_15()'><b>case_15</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-409695380" onClick='toggleBox("Output-409695380", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-409695380" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-409695380">
+验证在影像证明界面,上传对应客户影像证明照片,点击确认提交按钮后,可以正常弹出请输入登录密码,以验证身份界面<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_16()'><b>case_16</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1034912213" onClick='toggleBox("Output-1034912213", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1034912213" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1034912213">
+验证在请输入登录密码,以验证身份界面,输入对应用户登录密码,点击确认按钮后,可以正常提交合同并进入成功提交界面<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_17()'><b>case_17</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-222166555" onClick='toggleBox("Output-222166555", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-222166555" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-222166555">
+验证在成功提交界面,点击查看订单按钮后,可以正常进入订单列表-审核中列界面<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_18()'><b>case_18</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1719953287" onClick='toggleBox("Output-1719953287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1719953287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1719953287">
+验证在审核中列界面,进入数据库修改对应合同状态为审核通过后,可以自动改变合同状态并进入审核通过列<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_19()'><b>case_19</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1796176536" onClick='toggleBox("Output-1796176536", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1796176536" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1796176536">
+验证在审核通过列界面,选择对应合同点击补传资料按钮后,可以正常进入补传资料界面<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_20()'><b>case_20</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-2045369771" onClick='toggleBox("Output-2045369771", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2045369771" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2045369771">
+验证在补传资料界面,输入上传对应手机串号和IMEI码照片,点击确认提交按钮后,可以正常提交成功并返回审核通过列界面,且出现确认注册按钮<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_21()'><b>case_21</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1331263755" onClick='toggleBox("Output-1331263755", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1331263755" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1331263755">
+验证在审核通过列界面,点击签字按钮后,可以正常进入短信签章界面<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_22()'><b>case_22</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1950212359" onClick='toggleBox("Output-1950212359", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1950212359" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1950212359">
+验证在短信签章界面,点击获取验证码按钮后,可以正常发送且输入对应验证码后,可以正常提交成功并返回审核通过列界面,且出现绑定微信按钮<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_23()'><b>case_23</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-2011041369" onClick='toggleBox("Output-2011041369", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2011041369" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2011041369">
+验证在PDF列表界面,短信签章成功后,签章类型显示正确,且可以生成对应PDF合同,包含(商品分期确认书,消费贷款申请表,服务须知,贷款合同,还款须知,消费咨询服务合同,参保须知)<br/>
+</div>
+</td>
+<td></td>
+<td>73</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_24()'><b>case_24</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-1904088892" onClick='toggleBox("Output-1904088892", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1904088892" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1904088892">
+验证在审核通过列界面,点击确认注册按钮后,可以正常注册成功,且改变合同状态为已注册<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_25()'><b>case_25</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-585998852" onClick='toggleBox("Output-585998852", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-585998852" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-585998852">
+验证在已注册列界面,进入数据库根据合同ID执行存储过程后,可以自动改变合同状态并进入现行列<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+<tr>
+<td title='TestCases.P2P_DR_Mobile_SeriesA.case_26()'><b>case_26</b><br>Test class: TestCases.P2P_DR_Mobile_SeriesA<br/>
+<a href="#Output-2115075976" onClick='toggleBox("Output-2115075976", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2115075976" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2115075976">
+验证在现行列界面,进入数据库根据合同号查询后,该合同属于P2P_DR合作模式<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.P2P_DR_Mobile_SeriesA@5594a1b5</td></tr>
+</table><p>
+</body>
+</html>

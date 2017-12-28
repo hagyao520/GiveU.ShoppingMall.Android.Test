@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit name="JYQB_Shopping" desc="即有钱包商城购物流程的测试场景点">
+    
+    <!--【操作注意事项】
+        0.执行Case前,需设置城市所绑定的合作模式,当前为"P2P_DR"
+        1.执行Case前,需设置登录账号和密码,当前账号为"666666",密码为"612426"
+        2.执行Case前,需设置商品门店,当前门店为"11000088888 - 安科达科技有限公司（门店名称）"
+        3.执行Case前,需设置商品类型,当前类型为"手机"
+        4.执行Case前,需设置产品版本,当前类型为"系列A"
+        5.执行Case前,需设置商品总额,当前总额为"5000"
+        6.执行Case前,需设置首付总额,当前总额为"2000"
+        7.执行Case前,需设置分期期数,当前期数为"18"期
+        8.执行Case前,需设置申请时间,当前时间为"2017-09-14"
+        9.执行Case前,需设置首次还款日,当前还款日为"2017年10月14日"
+        10.执行Case前,需设置期数序号,当前序号为"18期"
+        11.执行Case前,需设置每期还款额,当前还款额为"317.0"
+        12.执行Case前,需设置还款日,当前还款日为"2019.03.14",根据所选择的分期数定义,一般为（申请时间的月份+分期数）
+        13.执行Case前,需设置身份证姓名,当前姓名为"时雪"
+        14.执行Case前,需设置身份证号码,当前身份证号码为"141023198202231927"
+    -->
+    <case 
+        name="前置条件" 
+        desc="验证在数据库中,执行对应SQL语句,可以正常执行成功">
+
+    </case>
+  
+    <case 
+        name="case0" 
+        desc="单条用例测试的前置条件">
+        <step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_pwd" value="qpalzm520" desc="输入登录密码"/>
+	    <step action="android-click" locator="text=确认" desc="点击确认按钮"/>
+	    <step action="android-click" locator="text=取消" desc="点击取消按钮"/>
+	    <step action="android-click" locator="text=取消" desc="点击取消按钮"/>
+    </case>
+    
+	<case 
+	    name="case1" 
+	    desc="验证在首页购物界面,点击顶部搜索商品栏,输入对应商品信息后,可以正常搜索出对应商品信息">
+        <step action="android-click" locator="text=搜索商品" desc="点击搜索商品输入框"/>
+        <step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/fragment_center_edit" value="小米手机" desc="输入小米手机"/>
+        <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/fragment_right_text" desc="点击搜索按钮"/>
+		<step action="android-check" locator="text=小米 红米 4X 全网通版 4GB+64GB 樱花粉 移动联通电信4G手机" value="小米 红米 4X 全网通版 4GB+64GB 樱花粉 移动联通电信4G手机" message="搜索商品信息失败(实际结果和预期结果不一致)" screenshot="Case1" desc="检查在首页购物界面,点击顶部搜索商品栏,输入对应商品信息后,是否可以正常搜索出对应商品信息"/>
+	</case>
+	
+	<case 
+	    name="case2" 
+	    desc="验证在商品搜索界面,选择对应商品点击后,可以正常进入商品购买界面">
+	    <step action="android-click" locator="text=小米 红米 4X 全网通版 4GB+64GB 樱花粉 移动联通电信4G手机" desc="点击小米手机"/>
+	    <step action="android-check" locator="text=收藏" value="收藏" message="进入商品购买界面失败(实际结果和预期结果不一致)" screenshot="Case2" desc="检查在商品搜索界面,选择对应商品点击后,是否可以正常进入商品购买界面"/>      
+	</case>
+	
+	<case 
+	    name="case3" 
+	    desc="验证在商品购买界面,点击已选区域后,可以正常进入选择商品版本和颜色界面">
+	    <step action="slide-up" details="duration:500;num:1;" desc="以每次500毫秒的时间,向上滑动1次"/>
+	    <step action="android-click" locator="text=已选" desc="点击立即购买按钮"/>
+	    <step action="android-check" locator="text=版本" value="版本" message="进入选择商品版本和颜色界面失败(实际结果和预期结果不一致)" screenshot="Case3" desc="检查在商品购买界面,点击立即购买按钮后,是否可以正常进入选择商品版本和颜色界面"/>      
+	</case>
+	
+	<case 
+	    name="case4" 
+	    desc="验证在选择商品版本和颜色界面,选择对应商品版本和颜色,点击下一步按钮后,可以正常进入选择商品支付方式和分期数界面">
+	    <step action="android-click" locator="text=3GB 32GB" desc="选择版本为3GB 32GB"/>
+	    <step action="android-click" locator="text=樱花粉" desc="选择颜色为樱花粉"/>
+	    <step action="android-click" locator="text=下一步" desc="点击下一步按钮"/>
+	    <step action="android-check" locator="text=分期数" value="分期数"  message="进入选择商品分期界面失败(实际结果和预期结果不一致)" screenshot="case4" desc="检查在选择商品版本和颜色界面,选择对应商品版本和颜色,点击下一步按钮后,是否可以正常进入选择商品支付方式和分期数界面"/>    
+	</case>
+	
+	<case 
+	    name="case5" 
+	    desc="验证在选择商品支付方式和分期数界面,选择对应支付方式,首付和分期数,点击确认按钮后,可以正常进入订单信息确认界面">	
+	    <step action="android-click" locator="text=即有钱包" desc="点击支付方式"/>
+	    <step action="android-click" locator="text=即有钱包" desc="选择即有钱包"/>
+		<step action="android-click" locator="text=零首付" desc="选择首付为零首付"/>
+		<step action="android-click" locator="text=6期" desc="选择分期数为6期"/>
+		<step action="android-click" locator="text=确认" desc="点击确认按钮"/>
+		<step action="android-check" locator="text=订单信息确认" value="订单信息确认" message="进入订单信息确认界面失败(实际结果和预期结果不一致)" screenshot="case5" desc="检查在选择商品支付方式和分期数界面,选择对应支付方式,首付和分期数,点击确认按钮后,是否可以正常进入订单信息确认界面"/>					
+	</case>
+	
+	<case 
+	    name="case6" 
+	    desc="验证在订单信息确认界面,点击收货地址区域选项后,可以正常进入选择收货地址界面">	
+	    <step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/rl_receiving_address" desc="点击收货地址区域选项"/>
+		<step action="android-check" locator="text=添加收货地址" value="添加收货地址" message="进入选择收货地址界面失败(实际结果和预期结果不一致)" screenshot="case6" desc="检查在订单信息确认界面,点击收货地址区域选项后,是否可以正常进入选择收货地址界面"/>					
+	</case>			
+		
+	<case 
+	    name="case7" 
+	    desc="验证在选择收货地址界面,点击添加收货地址按钮,选择输入对应收货地址信息,点击保存按钮后,可以正常保存添加成功">	
+	    <step action="android-click" locator="text=添加收货地址" desc="点击添加收货地址按钮"/>
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_receiving_name" value="时雪" desc="输入收货人为时雪"/>
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_receiving_phone" value="13244721532" desc="输入联系电话为13244721532"/>
+		<step action="android-click" locator="text=所在地区" desc="点击所在地区选项"/>
+		<step action="slide-up" locator="resource-id=com.giveu.shoppingmall:id/rv_address" details="duration:500;num:10;amp:0.3" desc="在省份列中,向上滑动10次" />
+		<step action="android-click" locator="text=广东" desc="选择省份为广东"/>
+		<step action="android-click" locator="text=深圳市" desc="选择城市为深圳市"/>
+		<step action="android-click" locator="text=南山区" desc="选择区县为南山区"/>
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_detail_address" value="南头街道华府国际" desc="输入详细地址为南头街道华府国际"/>
+		<step action="android-click" locator="text=保存" desc="点击保存按钮"/>
+		<step action="android-check" locator="text=删除" value="删除" message="添加收货地址失败(实际结果和预期结果不一致)" screenshot="case7" desc="检查在添加收货地址界面,点击添加收货地址按钮,选择输入对应收货地址信息,点击保存按钮后,是否可以正常保存添加成功"/>
+	</case>
+	
+	<case 
+	    name="case8" 
+	    desc="验证在选择收货地址界面,选择对应添加的收货地址后,可以正常选择,并返回订单信息确认界面">
+		<step action="android-click" locator="text=时雪" desc="选择收货人为时雪"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_ok" value="去支付" message="返回订单信息确认界面失败(实际结果和预期结果不一致)" screenshot="case8" desc="检查在选择收货地址界面,选择对应添加的收货地址后,是否可以正常选择,并返回订单信息确认界面"/>
+	</case>
+
+	<case 
+	    name="case9" 
+	    desc="验证在订单信息确认界面,勾选已阅读并同意消费分期合同选项,点击去支付按钮后,可以正常弹出请输入交易密码界面">
+		<step action="slide-up" details="duration:500;num:1;" desc="以每次500毫秒的时间,向上滑动1次"/>
+		<step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/confirm_order_agreement_checkbox" desc="勾选已阅读并同意消费分期合同选项"/>
+		<step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/tv_ok" desc="点击去支付按钮"/>
+		<step action="android-check" locator="text=请输入交易密码" value="请输入交易密码" message="弹出请输入交易密码界面失败(实际结果和预期结果不一致)" screenshot="case9" desc="检查在订单信息确认界面,勾选已阅读并同意消费分期合同选项,点击去支付按钮后,是否可以正常弹出请输入交易密码界面"/>
+	</case>
+	
+	<case 
+	    name="case_10" 
+	    desc="验证在请输入交易密码界面,输入对应交易密码后,可以正常进入验证绑定手机界面">
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/inputview_dialog" value="111111" desc="输入交易密码"/>
+		<step action="android-check" locator="text=已发送验证码到绑定手机" value="已发送验证码到绑定手机" message="进入验证绑定手机界面失败(实际结果和预期结果不一致)" screenshot="case_10" desc="检查在请输入交易密码界面,输入对应交易密码后,是否可以正常进入验证绑定手机界面"/>
+	</case>
+	
+	<case 
+	    name="case_11" 
+	    desc="验证在验证绑定手机界面,输入对应验证码后,可以正常进入订单支付成功界面">
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/input_view_pwd" value="123456" desc="输入验证码"/>
+        <step action="android-check" locator="text=支付成功" value="支付成功" message="进入支付成功界面失败(实际结果和预期结果不一致)" screenshot="case_11" desc="检查在验证绑定手机界面,输入对应验证码后,是否可以正常进入支付成功界面"/>
+	</case>
+	
+	<case 
+	    name="case_12" 
+	    desc="验证在订单支付成功界面,点击查看订单按钮后,可以正常进入我的订单界面">
+		<step action="android-click" locator="text=查看订单" desc="点击查看订单按钮"/>
+		<step action="android-check" locator="text=我的订单" value="我的订单" message="进入我的订单界面失败(实际结果和预期结果不一致)" screenshot="case_12" desc="检查在订单支付成功界面,点击查看订单按钮后,是否可以正常进入我的订单界面"/>
+	</case>
+	
+	<case 
+	    name="case_13" 
+	    desc="验证在我的订单界面,购买商品成功后,可以正常显示购买的商品,且对应订单状态和商品信息显示正确">
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_status" value="订单已发货，待签收" message="我的订单界面对应订单状态显示错误(实际结果和预期结果不一致)" screenshot="case_13" desc="检查在我的订单界面,购买商品成功后,对应订单状态是否显示正确"/>	
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_name" value="小米 红米 4X 全网通版 3GB+32GB 樱花粉 移动联通电信4G手机" message="我的订单界面对应订单信息显示错误(实际结果和预期结果不一致)" screenshot="case_13" desc="检查在我的订单界面,购买商品成功后,对应商品信息是否显示正确"/>
+	</case>
+	
+	<case 
+	    name="case_14" 
+	    desc="验证在我的订单界面,选择对应订单,点击确认收货按钮后,可以正常收货成功,且订单状态和对应状态的按钮显示正确">
+		<step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/tv_button_right" desc="点击确认收货按钮"/>
+		<step action="android-click" locator="text=确认" desc="点击确认按钮"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_status" value="订单已完成" message="订单状态显示错误,确认收货失败(实际结果和预期结果不一致)" screenshot="case_13" desc="检查在我的订单界面,确认收货成功后,对应商品订单状态是否显示正确"/>
+		<step action="android-check" locator="resource-id=com.giveu.shoppingmall:id/tv_button_right" value="订单追踪" message="对应订单状态的按钮显示错误,确认收货失败(实际结果和预期结果不一致)" screenshot="case_13" desc="检查在我的订单界面,确认收货成功后,对应订单状态的按钮是否显示正确"/>	
+	</case>
+</unit>

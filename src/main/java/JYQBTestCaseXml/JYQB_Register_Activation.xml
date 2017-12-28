@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit name="JYQB_Register_Activation" desc="即有钱包注册激活流程的测试场景点">
+    
+    <!--【操作注意事项】
+        0.执行Case前,为满足重复注册,需修改当前用户为未注册状态"
+    -->
+    
+    <case 
+        name="前置条件" 
+        desc="验证在数据库中,执行对应SQL语句,可以正常执行成功">
+        <step action="db-updatem" value="update t_user set status='0' where mobile='13244721532'" desc="进行数据库操作,修改当前用户为未激活状态"/>   
+    </case>
+  
+	<case 
+	    name="case1" 
+	    desc="验证在Android系统中,首次安装启动即有宝APP后,引导页显示正常且可以滑动至最后一页">
+		<step action="slide-left"  details="duration:500;num:4;" desc="以每次500毫秒的时间,向左滑动3次至引导页最后一页"/>
+		<step action="android-check" locator="text=立即体验" value="立即体验" message="安装启动失败(实际结果和预期结果不一致)" screenshot="Case1" desc="检查首次启动即有宝APP向左滑动三次引导页后,是否成功进入引导页最后一页"/>
+	</case>
+	
+	<case 
+	    name="case2" 
+	    desc="验证在引导页最后一页界面,点击立即体验按钮后,可以正常进入首页购物界面">
+	    <step action="android-click" locator="text=立即体验" desc="点击立即体验按钮"/>
+	    <step action="android-check" locator="text=热门品类" value="热门品类" message="进入首页购物界面失败(实际结果和预期结果不一致)" screenshot="Case2" desc="检查在引导页最后一页点击立即体验按钮后,是否成功进入首页购物界面"/>      
+	</case>
+	
+	<case 
+	    name="case3" 
+	    desc="验证在首页购物界面,未登录用户,选择我的模块,点击立即登录选项后,可以正常进入登录界面">
+	    <step action="android-click" locator="text=我的" desc="点击我的模块"/>
+	    <step action="android-click" locator="text=立即登录" desc="点击立即登录选项"/>
+	    <step action="android-check" locator="text=欢迎来到即有钱包" value="欢迎来到即有钱包" message="进入登录界面失败(实际结果和预期结果不一致)" screenshot="Case3" desc="检查在首页购物界面,未登录用户,点击还款模块后,是否可以正常进入登录界面"/>      
+	</case>
+	
+	<case 
+	    name="case4" 
+	    desc="验证在登录界面,点击快速注册按钮后,可以正常进入注册界面">
+	    <step action="android-click" locator="text=快速注册" desc="点击快速注册按钮"/>
+	    <step action="android-check" locator="text=欢迎注册即有钱包" value="欢迎注册即有钱包"  message="进入注册界面失败(实际结果和预期结果不一致)" screenshot="case4" desc="检查在登录界面,点击快速注册按钮后,是否可以正常进入注册界面"/>    
+	</case>
+	
+	<case 
+	    name="case5" 
+	    desc="验证在注册界面,输入对应手机号和验证码,点击下一步按钮后,可以正常进入设置登录密码界面">	
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_phone" value="13244721532" desc="输入手机号"/>
+		<step action="android-click" locator="text=获取验证码" desc="点击获取验证码按钮"/>
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_code" value="123456" desc="输入验证码"/>
+		<step action="android-click" locator="text=下一步" desc="点击下一步按钮"/>
+		<step action="android-check" locator="text=设置登录密码" value="设置登录密码" message="进入设置登录密码界面失败(实际结果和预期结果不一致)" screenshot="case5" desc="检查在注册界面,输入对应手机号和验证码,点击下一步按钮后,是否可以正常进入设置登录密码界面"/>					
+	</case>
+	
+	<case 
+	    name="case6" 
+	    desc="验证在设置登录密码界面,输入对应登录密码,点击完成按钮后,可以正常注册成功,并自动跳转至登录界面">			
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_pwd" value="qpalzm520" desc="输入登录密码"/>
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_confirm_pwd" value="qpalzm520" desc="输入确认登录密码"/>
+		<step action="android-click" locator="text=完成" desc="点击完成按钮"/>
+		<step action="android-check" locator="text=欢迎来到即有钱包" value="欢迎来到即有钱包" message="进入登录界面失败(实际结果和预期结果不一致)" screenshot="case6" desc="检查在设置登录密码界面,输入对应登录密码,点击完成按钮后,是否可以正常注册成功,并自动跳转至登录界面"/>					
+	</case>			
+		
+	<case 
+	    name="case7" 
+	    desc="验证在登录界面,输入对应账号和密码,点击登录按钮后,可以正常进入设置指纹密码界面,并弹出引导录入指纹弹窗">	
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_pwd" value="qpalzm520" desc="输入正确的登录密码"/>
+		<step action="android-click" locator="resource-id=com.giveu.shoppingmall:id/tv_login" desc="点击登录按钮"/>
+		<step action="android-check" locator="text=您还未录入指纹，请在设置中录入指纹" value="您还未录入指纹，请在设置中录入指纹" message="进入设置指纹密码界面失败(实际结果和预期结果不一致)" screenshot="case7" desc="检查在登录界面,输入对应账号和密码,点击登录按钮后,是否可以正常进入设置指纹密码界面,并弹出引导录入指纹弹窗"/>
+	</case>
+	
+	<case 
+	    name="case8" 
+	    desc="验证在设置指纹密码弹窗提醒界面,点击去设置按钮后,可以正常进入Android系统设置界面">
+		<step action="android-click" locator="text=去设置" desc="点击去设置按钮"/>
+		<step action="android-check" locator="text=设置" value="设置" message="进入Android系统设置界面失败(实际结果和预期结果不一致)" screenshot="case8" desc="检查在设置指纹密码弹窗提醒界面,点击去设置按钮后,是否可以正常进入Android系统设置界面"/>
+	</case>
+
+	<case 
+	    name="case9" 
+	    desc="验证在设置指纹密码界面,点击取消按钮后,可以正常跳过设置指纹密码,并进入个人中心界面">
+		<step action="android-return" details="num:1" desc="模拟点击Android系统返回键1次,返回至设置指纹弹窗界面"/>	 
+        <step action="android-click" locator="text=取消" desc="点击弹窗取消按钮"/>
+		<step action="android-click" locator="text=取消" desc="点击设置指纹密码取消按钮"/>
+		<step action="android-check" locator="text=个人中心" value="个人中心" message="进入个人中心界面失败(实际结果和预期结果不一致)" screenshot="case9" desc="检查在设置指纹密码界面,点击取消按钮后,是否可以正常跳过设置指纹密码,并进入个人中心界面"/>
+	</case>
+	
+	<case 
+	    name="case_10" 
+	    desc="验证在个人中心界面,点击查看信用钱包额度选项后,可以正常进入激活即有钱包界面">
+		<step action="android-click" locator="text=查看信用钱包额度" desc="点击查看信用钱包额度选项"/>
+		<step action="android-check" locator="text=30秒激活即有钱包" value="30秒激活即有钱包" message="进入30秒激活即有钱包界面失败(实际结果和预期结果不一致)" screenshot="case_10" desc="检查在个人中心界面,点击查看信用钱包额度选项后,是否可以正常进入激活即有钱包界面"/>
+	</case>
+	
+	<case 
+	    name="case_11" 
+	    desc="验证在激活即有钱包界面,点击立即激活按钮后,可以正常进入钱包激活界面">
+		<step action="android-click" locator="text=立即激活" desc="点击立即激活按钮"/>
+        <step action="android-check" locator="text=钱包激活" value="钱包激活" message="进入钱包激活界面失败(实际结果和预期结果不一致)" screenshot="case_11" desc="检查在激活即有钱包界面,点击立即激活按钮后,是否可以正常进入钱包激活界面"/>
+	</case>
+	
+	<!--<case 
+	    name="case_12" 
+	    desc="验证在钱包激活界面,输入对应姓名和身份证,点击下一步按钮后,可以正常进入银行卡填写界面">
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_name" value="时雪" desc="输入姓名"/>
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_ident" value="141023198202231928" desc="输入身份证号"/>
+		<step action="android-click" locator="text=下一步" desc="点击下一步按钮"/>
+		<step action="android-check" locator="text=银行卡号" value="银行卡号" message="进入银行卡填写界面失败(实际结果和预期结果不一致)" screenshot="case_12" desc="检查在钱包激活界面,输入对应姓名和身份证,点击下一步按钮后,是否可以正常进入银行卡填写界面"/>
+	</case>
+	
+	<case 
+	    name="case_13" 
+	    desc="验证在银行卡填写界面,输入对应银行卡号,手机号和验证码,点击立即激活按钮后,可以正常激活成功,并进入激活成功界面">
+		<step action="android-input" locator="" value="6217002670009863020" desc="输入银行卡号"/>
+		<step action="android-input" locator="" value="13244721532" desc="输入手机号"/>
+		<step action="android-click" locator="text=获取验证码" desc="点击获取验证码按钮"/>
+		<step action="android-input" locator="" value="123456" desc="输入验证码"/>
+		<step action="android-click" locator="text=立即激活" desc="点击立即激活按钮"/>
+		<step action="android-check" locator="text=激活成功" value="激活成功" message="进入激活成功界面失败(实际结果和预期结果不一致)" screenshot="case_13" desc="检查在银行卡填写界面,输入对应银行卡号,手机号和验证码,点击立即激活按钮后,是否可以正常激活成功,并进入激活成功界面"/>
+	</case>
+	
+    <case 
+	    name="case_14" 
+	    desc="验证在激活成功界面,点击设置交易密码按钮后,可以正常进入设置交易密码界面">
+		<step action="android-click" locator="text=设置交易密码" desc="点击设置交易密码按钮"/>
+		<step action="android-check" locator="text=请输入交易密码" value="请输入交易密码" message="进入设置交易密码界面失败(实际结果和预期结果不一致)" screenshot="case_14" desc="检查在激活成功界面,点击设置交易密码按钮后,是否可以正常进入设置交易密码界面"/>
+	</case>
+
+	<case 
+	    name="case_15" 
+	    desc="验证在设置交易密码界面,输入对应交易密码后,可以正常设置成功,并进入设置交易密码成功界面">
+		<step action="android-click" locator="" desc="点击设置交易密码输入框"/>
+        <step action="android-input" locator="" value="111111" desc="输入交易密码"/>
+        <step action="android-click" locator="" desc="点击设置交易密码输入框"/>
+        <step action="android-input" locator="" value="111111" desc="输入交易密码"/>
+		<step action="android-check" locator="text=设置成功" value="设置成功" message="进入设置交易密码成功界面失败(实际结果和预期结果不一致)" screenshot="case_15" desc="检查在设置交易密码界面,输入对应交易密码后,是否可以正常设置成功,并进入设置交易密码成功界面"/>
+	</case>
+	
+	<case 
+	    name="case_16" 
+	    desc="验证在个人中心界面,进入数据库根据用户ID修改对应可用额度后,可用正常新增可消费额度">	
+		<step action="db-update" value="update dafy_sales.giveu_credit_eligible set TOTAL_LIMIT='88888888',POS_LIMIT='88888888',POS_LIMIT_AVAILABLE='88888888',CY_LIMIT='88888888',CY_LIMIT_AVAILABLE='88888888',PAYMENT_ABILITY='88888888' where ID_PERSON=16542902" desc="进行数据库操作,新增当前用户可用额度"/>
+	</case>-->
+	
+		<case 
+	    name="case_12" 
+	    desc="验证在钱包激活界面,输入对应姓名和身份证,点击下一步按钮后,可以正常激活成功,并进入激活成功界面">
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_name" value="时雪" desc="输入姓名"/>
+		<step action="android-input" locator="resource-id=com.giveu.shoppingmall:id/et_ident" value="141023198202231928" desc="输入身份证号"/>
+		<step action="android-click" locator="text=下一步" desc="点击下一步按钮"/>
+		<step action="android-check" locator="text=激活成功" value="激活成功" message="进人激活成功界面失败(实际结果和预期结果不一致)" screenshot="case_12" desc="检查在钱包激活界面,输入对应姓名和身份证,点击下一步按钮后,是否可以正常激活成功,并进入激活成功界面"/>
+	</case>
+	
+    <case 
+	    name="case_13" 
+	    desc="验证在激活成功界面,点击确定按钮后,可以正常返回个人中心界面">
+		<step action="android-click" locator="text=确定" desc="点击确定按钮"/>
+		<step action="android-check" locator="text=个人中心" value="个人中心" message="进入个人中心界面失败(实际结果和预期结果不一致)" screenshot="case9" desc="检查在激活成功界面,点击确定按钮后,是否可以正常返回个人中心界面"/>
+	</case>
+</unit>

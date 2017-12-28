@@ -1,0 +1,113 @@
+package com.dafycredit.giveu.test.handler;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import com.dafycredit.giveu.test.base.Test_Step;
+import com.dafycredit.giveu.test.util.Appium_Util;
+import com.dafycredit.giveu.test.util.Selenium_Util;
+
+/**
+ * <br>处理界面上的点击操作，即如果当前操作为点击，<br/>
+ * 则选中脚本中配置的节点，并执行点击操作</br>
+ *
+ * @author  102051
+ * @email   mengxiw@dafycredit.com
+ * @date    2017年7月26日 上午10:27:26
+ * @version 1.0
+ * @since   1.0
+ */
+public class ClickAction_Handler {
+	
+	/**
+	 * <br>Web端点击操作</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void webClick(Test_Step step) throws Exception{ 
+		try {
+			 System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+			 step.getAndroidDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+			 Selenium_Util.getElement(step).click();
+			 Thread.sleep(600);	 
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+	}
+	
+	/**
+	 * <br>Web端选项框点击操作</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void selectClick(Test_Step step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		WebDriver driver = step.getAndroidDriver();
+		WebElement selectElem = Selenium_Util.getElement(step);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(selectElem).click().perform();
+        driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
+        WebElement optionElem = Selenium_Util.getElement1(step);
+        optionElem.click();
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+    }
+	
+	/**
+	 * <br>Android点击操作</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void androidClick(Test_Step step) throws Exception{ 
+		try {
+			 System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+			 step.getAndroidDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+			 Appium_Util.getElement(step).click(); 
+			 Thread.sleep(600);	 
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+	}
+	
+	/**
+	 * <br>点击浏览器弹出框的确定键</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void clickOk(Test_Step step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		step.getAndroidDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+		step.getAndroidDriver().switchTo().alert().accept();
+	}
+	
+	/**
+	 * <br>点击浏览器弹出框的取消键</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void clickCancel(Test_Step step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		step.getAndroidDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+		step.getAndroidDriver().switchTo().alert().dismiss();
+	}
+	
+	/**
+	 * <br>执行浏览器文本弹出框的文本输入</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void clickText(Test_Step step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		step.getAndroidDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+		step.getAndroidDriver().switchTo().alert().sendKeys(step.getValue());
+    }
+}

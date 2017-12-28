@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit name="WeChatShopping_Repayment" desc="即有钱包微信购物还款流程的测试场景点">
+    
+    <!--【操作注意事项】
+        0.执行Case前,为满足支付成功,需登陆微信"
+    -->
+    
+    <case 
+        name="前置条件" 
+        desc="验证在数据库中,执行对应SQL语句,可以正常执行成功">
+ 
+    </case>
+  	
+	<case 
+	    name="case1" 
+	    desc="验证在购物主界面,点击还款模块选项后,可以正常进入还款界面">	
+	    <step action="web-geturl" value="http://wx.dafycredit.cn/dafy-qq-store/?_wv=3#/home?idPerson=16535561&amp;signature=b18e640e48da16edc1bc6cb68221885649da7c9e&amp;appId=wx555a80b7106c612a&amp;nonceStr=51a04647-65b7-4cfd-90ec-144d848ce048&amp;timestamp=1508901961" desc="打开即有钱包购物主界面"/>
+        <step action="web-click" locator=".//*[@id='app']/nav/a[3]" desc="点击还款模块"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/div/div[1]/div[2]/div" value="下期应还" message="进入还款界面失败(实际结果和预期结果不一致)" screenshot="Case1" desc="检查在购物主界面,点击还款模块选项后,是否可以正常进入还款界面"/>
+	</case>
+	
+	<case 
+	    name="case2" 
+	    desc="验证在还款界面,点击下期应还,选择对应分期产品,输入对应还款金额,点击确定还款按钮确定后,可以正常还款成功,并进入还款成功界面">
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/div/div[1]/div[2]/div" desc="点击下期应还选项"/>
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/div[2]/div[1]/div[1]/div" desc="勾选分期产品选项"/>
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/footer/div[2]/img" desc="点击还款金额编辑按钮"/>
+	    <step action="web-input" locator=".//*[@id='submitMoney']" value="0.05" desc="输入还款金额"/>
+	    <step action="web-click" locator=".//*[@id='app']/div[2]/div/div/div[2]/div[2]" desc="点击确认按钮"/>
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/footer/div[3]" desc="点击确定还款按钮"/>
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div[2]/div[4]/div" desc="点击立即支付按钮"/>
+	    <step action="web-implicit" value="20000" desc="隐形等待20秒"/>
+	    <step action="web-check" locator=".//*[@id='app']/div[1]/div[2]" value="已成功发起代扣" message="还款失败,未进入还款成功界面(实际结果和预期结果不一致)" screenshot="Case2" desc="检查在还款界面,点击下期应还,选择对应分期产品,输入对应还款金额,点击确定还款按钮确定后,是否可以正常还款成功,并进入还款成功界面"/>      
+	</case>	
+</unit>

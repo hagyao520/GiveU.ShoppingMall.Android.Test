@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit name="WeChatShopping_Activation" desc="即有钱包微信购物激活流程的测试场景点">
+    
+    <!--【操作注意事项】
+        0.执行Case前,为满足重复注册,需修改当前用户为未注册状态"
+    -->
+    
+    <case 
+        name="前置条件" 
+        desc="验证在数据库中,执行对应SQL语句,可以正常执行成功">
+         
+    </case>
+  
+	<case 
+	    name="case1" 
+	    desc="验证在Android系统谷歌浏览器中,打开即有钱包激活网址,可以正常进入激活界面">
+		<step action="web-geturl" value="http://wx.dafycredit.cn/dafy-qq-store/#/activation" desc="打开即有钱包激活界面"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[2]" desc="点击查看我的钱包额度按钮"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/div[3]" value="同意协议并授权" message="进入即有钱包激活界面失败(实际结果和预期结果不一致)" screenshot="Case1" desc="检查在Android系统谷歌浏览器中,打开即有钱包激活网址,可以正常进入即有钱包激活界面"/>
+	</case>
+	
+	<case 
+	    name="case2" 
+	    desc="验证在激活界面,输入对应用户身份信息,选择对应平台,点击同意协议并授权按钮后,可以正常激活成功,并进入即有钱包购物主界面">
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[1]/div[2]/input" value="时雪" desc="输入姓名"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[2]/div[2]/input" value="141023198202231928" desc="输入身份证号"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[3]/div[2]/input" value="13244721532" desc="输入手机号"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[4]/div[2]/input" value="100" desc="输入即有分"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[5]/div[2]/input" value="100" desc="输入腾讯分"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[6]/div[2]/input" value="100" desc="输入消费金融分"/>
+		<step action="select-click" locator=".//*[@id='app']/div[1]/div[1]/div[7]/div[2]/select" value=".//*[@id='app']/div[1]/div[1]/div[7]/div[2]/select/option[2]" desc="选择平台"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[3]" desc="点击同意协议并授权按钮"/>
+		<step action="wait-forced" value="8000" desc="强制等待8秒"/>
+		<step action="web-check" locator=".//*[@id='app']/nav/a[1]" value="购物" message="激活失败,未进入即有钱包购物主界面(实际结果和预期结果不一致)" screenshot="Case2" desc="检查在激活界面,输入对应身份信息,选择对应平台,点击同意协议并授权按钮后,可以正常激活成功,并进入即有钱包购物主界面"/>
+	</case>
+	
+	<case 
+	    name="case3" 
+	    desc="验证在首页购物界面,对应用户的总额度信息显示正确">
+	    <step action="web-check" locator=".//*[@id='app']/div[1]/header/div[2]/div/div[2]" value="总额度444444.00" message="该用户总额度信息显示错误(实际结果和预期结果不一致)" screenshot="Case3" desc="检查在首页购物界面,对应用户的总额度信息显示正确"/>    
+	</case>
+</unit>

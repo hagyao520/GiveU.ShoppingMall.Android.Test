@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit name="WeChatShopping_Shopping" desc="即有钱包微信购物流程的测试场景点">
+    
+    <!--【操作注意事项】
+        0.执行Case前,为满足重复注册,需修改当前用户为未注册状态"
+    -->
+    
+    <case 
+        name="前置条件" 
+        desc="验证在数据库中,执行对应SQL语句,可以正常执行成功">
+         
+    </case>
+  
+	<case 
+	    name="case1" 
+	    desc="验证在Android系统谷歌浏览器中,打开即有钱包购物网址,可以正常进入购物界面">
+		<step action="web-geturl" value="http://wx.dafycredit.cn/dafy-qq-store/?_wv=3#/home?idPerson=16535561&amp;signature=b18e640e48da16edc1bc6cb68221885649da7c9e&amp;appId=wx555a80b7106c612a&amp;nonceStr=51a04647-65b7-4cfd-90ec-144d848ce048&amp;timestamp=1508901961" desc="打开即有钱包购物主界面"/>
+		<step action="web-check" locator=".//*[@id='app']/nav/a[1]" value="购物" message="进入即有钱包购物主界面失败(实际结果和预期结果不一致)" screenshot="Case1" desc="检查在Android系统谷歌浏览器中,打开即有钱包购物网址,可以正常进入购物界面"/>	
+	</case>
+	
+	<case 
+	    name="case2" 
+	    desc="验证在购物界面,选择对应商品,点击商品名称后,可以正常进入商品购买界面">
+		<step action="wait-forced" value="3000" desc="强制等待3秒,加载可用额度"/>
+		<step action="web-click" locator=".//*[@id='container']/a[2]/div[2]/div[1]" desc="选择魅族 PRO6S 4GB+64GB 全网通公开版 星空黑 移动联通电信4G手机 双卡双待手机"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/footer/ul/li[2]" value="立即购买" message="进入商品购买界面失败(实际结果和预期结果不一致)" screenshot="Case2" desc="检查在购物界面,选择对应商品,点击商品名称后,可以正常进入商品购买界面"/>
+	</case>
+	
+	<case 
+	    name="case3" 
+	    desc="验证在商品购买界面,点击已选区域后,可以正常进入选择商品版本和颜色界面">
+		<step action="web-click" locator=".//*[@id='detailMain']/div[2]/ul/li[1]" desc="点击已选区域"/>
+	    <step action="web-check" locator=".//*[@id='app']/div[1]/footer/ul/li[2]/span" value="选择分期数" message="进入商品版本和颜色界面失败(实际结果和预期结果不一致)" screenshot="Case3" desc="检查在商品购买界面,点击已选区域后,可以正常进入选择商品版本和颜色界面"/>    
+	</case>
+	
+	<case 
+	    name="case4" 
+	    desc="验证在选择商品版本和颜色界面,选择对应商品版本和颜色,点击下一步按钮后,可以正常进入选择分期数界面">
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div/div[2]/ul/li/div/ul/li[2]" desc="选择颜色为玫瑰金"/>
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/footer/ul/li[2]" desc="点击下一步按钮"/>
+	    <step action="web-check" locator=".//*[@id='app']/div[1]/footer/ul/li[2]" value="确认"  message="进入选择分期数界面失败(实际结果和预期结果不一致)" screenshot="case4" desc="检查在选择商品版本和颜色界面,选择对应商品版本和颜色,点击下一步按钮后,是否可以正常进入选择分期数界面"/>    
+	</case>
+	
+	<case 
+	    name="case5" 
+	    desc="验证在选择分期数界面,选择对应分期数,点击确认按钮后,可以正常进入订单信息确认界面">	
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div/div[2]/ul/li[2]" desc="选择分期数为6个月"/>
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/footer/ul/li[2]" desc="点击确认按钮"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/footer/ul/li[2]" value="去支付" message="进入订单信息确认界面失败(实际结果和预期结果不一致)" screenshot="case5" desc="检查在选择商品支付方式和分期数界面,选择对应支付方式,首付和分期数,点击确认按钮后,是否可以正常进入订单信息确认界面"/>					
+	</case>
+	
+	<case 
+	    name="case6" 
+	    desc="验证在订单信息确认界面,点击收货地址区域选项后,可以正常进入添加收货地址界面">	
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/div[1]" desc="点击收货地址区域选项"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/div" value="添加收货地址" message="进入添加收货地址界面失败(实际结果和预期结果不一致)" screenshot="case6" desc="检查在订单信息确认界面,点击收货地址区域选项后,是否可以正常进入添加收货地址界面"/>					
+	</case>			
+		
+	<case 
+	    name="case7" 
+	    desc="验证在选择收货地址界面,点击选择其他地址选项,选择输入对应收货地址信息,点击确认按钮后,可以正常添加成功,并返回至订单信息确认界面">	
+	    <step action="web-click" locator=".//*[@id='app']/div[1]/div" desc="点击添加收货地址按钮"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[1]/div[2]/input" value="时雪" desc="输入收货人为时雪"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[2]/div[2]/input" value="13244721532" desc="输入联系电话为13244721532"/>
+		<!-- <step action="select-click" locator=".//*[@id='app']/div[1]/div[1]/div[3]/div[2]" value=".//*[@id='app']/div[1]/div[3]/div[2]/div[3]/div[32]" desc="点击所在地区选项,选择广东省"/>  -->
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[1]/div[3]/div[2]" desc="点击所在地区选项"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div[2]/div[3]/div[32]" desc="选择省份为广东"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div[2]/div[3]/div[6]" desc="选择城市为深圳市"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div[2]/div[3]/div[3]" desc="选择区县为南山区"/>
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[1]/div[4]/div/textarea" value="南头街道华府国际" desc="输入详细地址为南头街道华府国际"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[3]" desc="点击确认按钮"/>
+		<step action="web-implicit" value="20000" desc="隐形等待20秒"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/ul/li[1]/div[2]" desc="选择收货人为时雪"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/footer/ul/li[2]" value="去支付" message="添加收货地址失败(实际结果和预期结果不一致)" screenshot="case7" desc="检查在选择收货地址界面,点击选择其他地址选项,选择输入对应收货地址信息,点击确认按钮后,是否可以正常添加成功,并返回至订单信息确认界面"/>
+	</case>
+	
+	<case 
+	    name="case8" 
+	    desc="验证在订单信息确认界面,勾选已阅读并同意消费分期合同选项,点击去支付按钮后,可以正常弹出请输入交易密码界面">
+		<step action="adb-swipe" value="250 900 250 300" desc="执行ADB命令,向上滑动到指定坐标"/>
+		<step action="wait-forced" value="2000" desc="强制等待2秒"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div[7]/i" desc="勾选已阅读并同意消费分期合同选项"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div[3]/div[7]/i" desc="勾选已阅读并同意消费分期合同选项"/>
+		<step action="web-click" locator=".//*[@id='app']/div[1]/footer/ul/li[2]" desc="点击去支付按钮"/>
+		<step action="web-implicit" value="20000" desc="隐形等待20秒"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/div[4]/div/div/div[3]/span" value="下单金额" message="弹出请输入交易密码界面失败(实际结果和预期结果不一致)" screenshot="case8" desc="检查在订单信息确认界面,勾选已阅读并同意消费分期合同选项,点击去支付按钮后,是否可以正常弹出请输入交易密码界面"/>
+	</case>
+	
+	<case 
+	    name="case9" 
+	    desc="验证在请输入交易密码界面,输入对应交易密码后,可以正常进入验证绑定手机界面">
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div[4]/div/div/div[4]/input" value="111111" desc="输入交易密码"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/div/header/div[1]" value="已发送验证码到指定手机" message="进入验证绑定手机界面失败(实际结果和预期结果不一致)" screenshot="case9" desc="检查在请输入交易密码界面,输入对应交易密码后,是否可以正常进入验证绑定手机界面"/>
+	</case>
+	
+	<case 
+	    name="case_10" 
+	    desc="验证在验证绑定手机界面,输入对应验证码后,可以正常进入订单支付成功界面">
+		<step action="web-input" locator=".//*[@id='app']/div[1]/div/div/input" value="123456" desc="输入验证码"/>
+        <step action="wait-forced" value="8000" desc="强制等待8秒"/>
+        <step action="web-check" locator=".//*[@id='app']/div[1]/div/div[2]/span" value="支付成功" message="进入支付成功界面失败(实际结果和预期结果不一致)" screenshot="case_10" desc="检查在验证绑定手机界面,输入对应验证码后,是否可以正常进入支付成功界面"/>
+	</case>
+	
+	<case 
+	    name="case_11" 
+	    desc="验证在订单支付成功界面,点击查看订单按钮后,可以正常进入我的订单界面">
+		<step action="web-click" locator=".//*[@id='app']/div[1]/div/div[5]" desc="点击查看订单按钮"/>
+		<step action="web-implicit" value="20000" desc="隐形等待20秒"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/nav/ul/li[1]" value="全部" message="进入我的订单界面失败(实际结果和预期结果不一致)" screenshot="case_11" desc="检查在订单支付成功界面,点击查看订单按钮后,是否可以正常进入我的订单界面"/>
+	</case>
+	
+	<case 
+	    name="case_12" 
+	    desc="验证在我的订单界面,购买商品成功后,可以正常显示购买的商品,且对应订单状态和商品信息显示正确">
+		<step action="web-check" locator=".//*[@id='app']/div[1]/ul/li[1]/div[1]/div[2]" value="订单已发货，待签收" message="我的订单界面对应订单状态显示错误(实际结果和预期结果不一致)" screenshot="case_12" desc="检查在我的订单界面,购买商品成功后,对应订单状态是否显示正确"/>	
+		<step action="web-check" locator=".//*[@id='app']/div[1]/ul/li[1]/div[2]/div/h4" value="魅族 PRO6S 4GB+64GB 全网通公开版 玫瑰金 移动联通电信4G手机 双卡双待" message="我的订单界面对应订单信息显示错误(实际结果和预期结果不一致)" screenshot="case_12" desc="检查在我的订单界面,购买商品成功后,对应商品信息是否显示正确"/>
+	</case>
+	
+	<case 
+	    name="case_13" 
+	    desc="验证在我的订单界面,选择对应订单,点击确认收货按钮后,可以正常收货成功,且订单状态和对应状态的按钮显示正确">
+		<step action="web-click" locator=".//*[@id='app']/div[1]/ul/li[1]/div[3]/div[2]/div[1]" desc="点击确认收货按钮"/>
+		<step action="web-click" locator=".//*[@id='app']/div[2]/div/div/div[2]/div[2]" desc="点击确认按钮"/>
+		<step action="web-click" locator=".//*[@id='app']/div[2]/div/div/div[2]/div" desc="点击确认按钮"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/ul/li[1]/div[1]/div[2]" value="已完成" message="订单状态显示错误,确认收货失败(实际结果和预期结果不一致)" screenshot="case_13" desc="检查在我的订单界面,确认收货成功后,对应商品订单状态是否显示正确"/>
+		<step action="web-check" locator=".//*[@id='app']/div[1]/ul/li[1]/div[3]/div[2]/div" value="订单追踪" message="对应订单状态的按钮显示错误,确认收货失败(实际结果和预期结果不一致)" screenshot="case_13" desc="检查在我的订单界面,确认收货成功后,对应订单状态的按钮是否显示正确"/>	
+	</case>
+</unit>

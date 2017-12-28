@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="21" passed="20">
+  <reporter-output>
+    <line>
+      <![CDATA[修改当前用户所有合同为取消状态成功！]]>
+    </line>
+    <line>
+      <![CDATA[验证在Android中,首次安装启动即有宝APP后,引导页显示正常且可以滑动至最后一页]]>
+    </line>
+    <line>
+      <![CDATA[验证在引导页最后一页界面,点击开始体验按钮后,可以正常进入登录界面]]>
+    </line>
+    <line>
+      <![CDATA[验证在引导页最后一页界面,点击开始体验按钮后,可以正常进入登录界面]]>
+    </line>
+    <line>
+      <![CDATA[验证在产品信息界面,选择点击对应产品信息后,可以正常选择且自动弹出商品信息和身份证信息界面]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+    <line>
+      <![CDATA[填写基本信息]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="609295" started-at="2017-08-07T07:21:56Z" finished-at="2017-08-07T07:32:05Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="609295" started-at="2017-08-07T07:21:56Z" finished-at="2017-08-07T07:32:05Z">
+      <class name="TestCases.PPM_Mobile_Series_B">
+        <test-method status="PASS" signature="stup()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="stup" is-config="true" duration-ms="42669" started-at="2017-08-07T15:21:56Z" finished-at="2017-08-07T15:22:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stup -->
+        <test-method status="PASS" signature="case0()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case0" duration-ms="952" started-at="2017-08-07T15:22:38Z" finished-at="2017-08-07T15:22:39Z">
+          <reporter-output>
+            <line>
+              <![CDATA[修改当前用户所有合同为取消状态成功！]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case0 -->
+        <test-method status="PASS" signature="case1()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case1" duration-ms="2960" started-at="2017-08-07T15:22:39Z" finished-at="2017-08-07T15:22:42Z">
+          <reporter-output>
+            <line>
+              <![CDATA[验证在Android中,首次安装启动即有宝APP后,引导页显示正常且可以滑动至最后一页]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case1 -->
+        <test-method status="PASS" signature="case2()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case2" duration-ms="2912" started-at="2017-08-07T15:22:42Z" finished-at="2017-08-07T15:22:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[验证在引导页最后一页界面,点击开始体验按钮后,可以正常进入登录界面]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case2 -->
+        <test-method status="PASS" signature="case3()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case3" duration-ms="19961" started-at="2017-08-07T15:22:45Z" finished-at="2017-08-07T15:23:05Z">
+          <reporter-output>
+            <line>
+              <![CDATA[验证在引导页最后一页界面,点击开始体验按钮后,可以正常进入登录界面]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case3 -->
+        <test-method status="PASS" signature="case4()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case4" duration-ms="124250" started-at="2017-08-07T15:23:05Z" finished-at="2017-08-07T15:25:09Z">
+          <reporter-output>
+            <line>
+              <![CDATA[验证在产品信息界面,选择点击对应产品信息后,可以正常选择且自动弹出商品信息和身份证信息界面]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case4 -->
+        <test-method status="PASS" signature="case5()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case5" duration-ms="43134" started-at="2017-08-07T15:25:09Z" finished-at="2017-08-07T15:25:52Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case5 -->
+        <test-method status="PASS" signature="case6()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case6" duration-ms="40239" started-at="2017-08-07T15:25:52Z" finished-at="2017-08-07T15:26:33Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case6 -->
+        <test-method status="PASS" signature="case7()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case7" duration-ms="45183" started-at="2017-08-07T15:26:33Z" finished-at="2017-08-07T15:27:18Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case7 -->
+        <test-method status="FAIL" signature="case8()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case8" duration-ms="21889" started-at="2017-08-07T15:27:18Z" finished-at="2017-08-07T15:27:40Z">
+          <exception class="java.lang.reflect.InvocationTargetException">
+            <full-stacktrace>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.dafycredit.giveu.test.service.RunUnitService.runCase(RunUnitService.java:97)
+	at TestCases.PPM_Mobile_Series_B.case8(PPM_Mobile_Series_B.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.dafycredit.giveu.test.util.AppiumUtil.getElement(AppiumUtil.java:90)
+	at com.dafycredit.giveu.test.handler.ClickActionHandler.click(ClickActionHandler.java:30)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.reflect.InvocationTargetException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case8 -->
+        <test-method status="PASS" signature="case9()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case9" duration-ms="3133" started-at="2017-08-07T15:27:40Z" finished-at="2017-08-07T15:27:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case9 -->
+        <test-method status="PASS" signature="case_10()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_10" duration-ms="2960" started-at="2017-08-07T15:27:43Z" finished-at="2017-08-07T15:27:46Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_10 -->
+        <test-method status="PASS" signature="case_11()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_11" duration-ms="3493" started-at="2017-08-07T15:27:46Z" finished-at="2017-08-07T15:27:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_11 -->
+        <test-method status="PASS" signature="case_12()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_12" duration-ms="52385" started-at="2017-08-07T15:27:49Z" finished-at="2017-08-07T15:28:42Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_12 -->
+        <test-method status="PASS" signature="case_13()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_13" duration-ms="8394" started-at="2017-08-07T15:28:42Z" finished-at="2017-08-07T15:28:50Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_13 -->
+        <test-method status="PASS" signature="case_14()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_14" duration-ms="1662" started-at="2017-08-07T15:28:50Z" finished-at="2017-08-07T15:28:52Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_14 -->
+        <test-method status="PASS" signature="case_15()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_15" duration-ms="1467" started-at="2017-08-07T15:28:52Z" finished-at="2017-08-07T15:28:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_15 -->
+        <test-method status="PASS" signature="case_16()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_16" duration-ms="22" started-at="2017-08-07T15:28:53Z" finished-at="2017-08-07T15:28:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_16 -->
+        <test-method status="PASS" signature="case_17()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_17" duration-ms="39082" started-at="2017-08-07T15:28:53Z" finished-at="2017-08-07T15:29:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_17 -->
+        <test-method status="PASS" signature="case_18()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_18" duration-ms="148719" started-at="2017-08-07T15:29:32Z" finished-at="2017-08-07T15:32:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_18 -->
+        <test-method status="PASS" signature="case_19()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_19" duration-ms="18" started-at="2017-08-07T15:32:01Z" finished-at="2017-08-07T15:32:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_19 -->
+        <test-method status="PASS" signature="case_20()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="case_20" duration-ms="609" started-at="2017-08-07T15:32:01Z" finished-at="2017-08-07T15:32:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[填写基本信息]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- case_20 -->
+        <test-method status="PASS" signature="after()[pri:0, instance:TestCases.PPM_Mobile_Series_B@343f4d3d]" name="after" is-config="true" duration-ms="3167" started-at="2017-08-07T15:32:02Z" finished-at="2017-08-07T15:32:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- TestCases.PPM_Mobile_Series_B -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

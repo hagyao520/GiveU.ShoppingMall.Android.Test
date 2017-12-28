@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="JYQB_Shopping" parallel="false" configfailurepolicy ="continue">
+    <!---->
+    <test name="即有钱包注册激活流程的测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="JYQBTestCases.JYQB_Register_Activation"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    <!---->
+    <test name="即有钱包商城购物流程的测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="JYQBTestCases.JYQB_Shopping"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    <!---->
+    <test name="即有钱包取现流程的测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="JYQBTestCases.JYQB_Enchashment"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    <!---->
+    <test name="即有钱包还款流程的测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="JYQBTestCases.JYQB_Repayment"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    <!-- 调用的监听 -->    
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        <!--"org.testng.internal org.testng.TestRunner org.testng.SuiteRunner org.testng.remote.RemoteTestNG org.testng.TestNG sun.reflect java.lang"--> 
+        <!--"org.testng.reporters.EmailableReporter2,org.testng.reporters.jq.Main,org.testng.reporters.SuiteHTMLReporter,org.testng.reporters.XMLReporter,org.testng.reporters.JUnitReportReporter"--> 
+    </listeners>      
+</suite>
